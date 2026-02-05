@@ -1,0 +1,169 @@
+:root {
+  font-family: "Segoe UI", -apple-system, BlinkMacSystemFont, "Hiragino Sans",
+    sans-serif;
+  color: #0f172a;
+  background-color: #f8fafc;
+  line-height: 1.6;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #eef2ff 0%, #f8fafc 100%);
+}
+
+#app {
+  min-height: 100vh;
+}
+
+.app {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem 3rem;
+}
+
+header h1 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+header p {
+  margin: 0;
+  color: #475569;
+}
+
+.panel {
+  background: #fff;
+  border-radius: 18px;
+  padding: 1.8rem;
+  margin-top: 1.5rem;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  font-weight: 600;
+}
+
+input {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  border-radius: 12px;
+  border: 1px solid #cbd5f5;
+  font-size: 1rem;
+}
+
+input:focus {
+  outline: 2px solid #6366f1;
+  border-color: #6366f1;
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+button {
+  flex: 1 1 auto;
+  border: none;
+  border-radius: 12px;
+  padding: 0.85rem 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 120ms ease, opacity 120ms ease;
+}
+
+button[type="submit"] {
+  background: #2563eb;
+  color: #fff;
+}
+
+button[type="button"] {
+  background: #e2e8f0;
+  color: #0f172a;
+}
+
+button:active {
+  transform: translateY(1px);
+}
+
+.status {
+  font-weight: 600;
+  color: #0f172a;
+  margin-bottom: 1rem;
+}
+
+.status[data-state="loading"] {
+  color: #d97706;
+}
+
+.status[data-state="error"] {
+  color: #dc2626;
+}
+
+.member-result {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.member-card {
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 1rem;
+  background: #f8fafc;
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 0.5rem 1.2rem;
+}
+
+.member-card dt {
+  font-weight: 600;
+  color: #475569;
+}
+
+.member-card dd {
+  margin: 0;
+}
+
+.raw-json {
+  font-family: ui-monospace, SFMono-Regular, SFMono, Menlo, Monaco, Consolas,
+    "Liberation Mono", monospace;
+  background: #0f172a;
+  color: #e2e8f0;
+  padding: 1rem;
+  border-radius: 12px;
+  overflow-x: auto;
+  font-size: 0.9rem;
+}
+
+.note {
+  font-size: 0.85rem;
+  color: #475569;
+}
+
+.placeholder {
+  color: #94a3b8;
+  font-style: italic;
+}
+
+@media (max-width: 560px) {
+  .member-card {
+    grid-template-columns: 1fr;
+  }
+}

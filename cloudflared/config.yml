@@ -1,0 +1,9 @@
+tunnel: "2565da1a-af08-4666-a8ff-65df59ae8cbd"
+credentials-file: /etc/cloudflared/2565da1a-af08-4666-a8ff-65df59ae8cbd.json
+
+ingress:
+  - hostname: kunitake.net
+    service: http://nginx:8000
+    originRequest:
+      noTLSVerify: true
+  - service: http_status:404
