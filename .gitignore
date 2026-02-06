@@ -2,7 +2,8 @@ cloudflared/*.json
 *.pyc
 __pycache__/
 frontend/node_modules/
-frontend/dist/
-frontend/viewer/
 .env
-docs/
+docs/*.css
+docs/*.js
+docs/index.html
+docs/CNAME
