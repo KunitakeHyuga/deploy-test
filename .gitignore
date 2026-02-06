@@ -3,7 +3,3 @@ cloudflared/*.json
 __pycache__/
 frontend/node_modules/
 .env
-docs/*.css
-docs/*.js
-docs/index.html
-docs/CNAME
