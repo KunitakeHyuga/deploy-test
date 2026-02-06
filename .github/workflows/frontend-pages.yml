@@ -35,7 +35,7 @@ jobs:
       - name: Commit docs changes
         id: commit_docs
         run: |
-          if git diff --quiet -- docs; then
+          if [ -z "$(git status --short docs)" ]; then
             echo "changed=false" >> "$GITHUB_OUTPUT"
             exit 0
           fi
